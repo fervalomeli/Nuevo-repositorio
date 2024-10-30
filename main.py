@@ -1,10 +1,16 @@
+import main as mn
 def hello_world():
     print("hello world")
     return True
 
-
 def get_minium(my_list):
-    return
+    if not my_list:
+        return None  # Handle empty list case
+    min_value = my_list[0]
+    for element in my_list:
+        if element < min_value:
+            min_value = element
+    return min_value
 
 def get_max(my_list):
     max_value = my_list[0]
